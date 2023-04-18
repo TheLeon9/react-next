@@ -1,0 +1,21 @@
+@import '../../../styles/variable.scss';
+
+.notification {
+    padding: 6px;
+    border-radius: $border_radius;
+    margin: 20px 0px;
+    &.success {
+        border: $border_width solid $first_color;
+        background: $second_color;
+        p {
+            color: $black_color;
+        }
+    }
+    &.warning {
+        border: $border_width solid $black_color;
+        background: $first_color;
+        p {
+            color: $black_color;
+        }
+    }
+}

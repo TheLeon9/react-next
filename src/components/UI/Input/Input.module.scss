@@ -1,0 +1,40 @@
+@import '../../../styles/variable.scss';
+
+.input_wrapper {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-direction:column-reverse;
+    label {
+        color: $white_color;
+        font-size: $font_size;
+        transition: 0.2s;
+        font-family: $second_font;
+        text-indent: $text_indent;
+    }
+    input {
+        padding: 10px 0;
+        width: 100%;
+        border: none;
+        outline: none;
+        font-size: $small_font_size;
+        font-weight: 400;
+        background: transparent;
+        color: $white_color;
+        border-bottom: $border_width solid $white_color;
+        transition: 0.2s;
+        font-family: $second_font;
+        text-indent: $text_indent;
+        &:focus{
+            border-bottom: $border_width solid $first_color;
+        }
+        &:valid{
+            border-bottom: $border_width solid $first_color;
+        }
+        &:focus+label,
+        &:valid+label{
+            color: $first_color;
+        }
+    }
+}

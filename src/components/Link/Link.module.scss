@@ -1,0 +1,34 @@
+@import "../../styles/variable.scss";
+
+.link_card {
+  padding: 16px;
+  margin: 10px;
+  width: 200px;
+  border-radius: $border_radius;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  justify-content: space-between;
+}
+.link_cont {
+  height: 34px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.a_nav {
+  color: $first_color;
+  font-family: $first_font;
+  text-decoration: none;
+  font-size: $big_font_size;
+  transition: 0.2s;
+  width: 100%;
+  &:hover {
+    cursor: pointer;
+    font-size: calc($big_font_size + 2px);
+  }
+}
+.p {
+  width: 100%;
+}

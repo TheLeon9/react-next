@@ -1,0 +1,40 @@
+@import '../../../styles/variable.scss';
+
+.button_container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 60px;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    font-size: $medium_font_size;
+    font-family: $first_font;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    cursor: pointer;
+    transition: 0.2s all;
+    border-radius: $border_radius;
+    &_primary {
+        background: $second_color;
+        color: $black_color;
+        border: $border_width solid $first_color;
+        &:hover {
+            background: $first_color;
+            margin-bottom: $button_margin_bottom;
+        }
+    }
+    &_secondary {
+        border: $border_width solid $first_color;
+        background: transparent;
+        color: $white_color;
+        &:hover {
+            background: $first_color;
+            color: $black_color;
+            margin-bottom: $button_margin_bottom;
+        }
+    }
+}
