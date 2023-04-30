@@ -4,7 +4,7 @@ import Title from "@/components/UI/Title";
 
 export default function About() {
   return (
-    <div className={style.form_cont}>
+    <div className={style.form_cont_about}>
       <Title level="h1" title="ABOUT" className="h1_pink" size="title" />
       <p className="p p_small">
         Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Morbi gravida
@@ -18,8 +18,13 @@ export default function About() {
         <Title level="h2" title="START WITH" className="h2_pink" size="big" />
         <div className={style.about_button_cont}>
           <div className={style.about_button_register}>
-            <Link href="/auth/register" className={style.a_nav}>
-              Register
+            <Link href="/auth/register/company" className={style.a_nav}>
+              Register Company
+            </Link>
+          </div>
+          <div className={style.about_button_register_other}>
+            <Link href="/auth/register/freelance" className={style.a_nav}>
+              Register Freelance
             </Link>
           </div>
           <div className={style.about_button_login}>
@@ -28,11 +33,11 @@ export default function About() {
             </Link>
           </div>
         </div>
-        <div className={style.returnLink}>
-          <Link href="/" className={style.a_nav_return}>
-            Back
-          </Link>
-        </div>
+      </div>
+      <div className="returnLink">
+        <Link href="/" className="basic_link">
+          Back
+        </Link>
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-@import '../../../styles/variable.scss';
+@import '@/styles/variable.scss';
 
 .button_container{
     display: flex;
@@ -8,6 +8,7 @@
 }
 .btn {
     display: inline-block;
+    letter-spacing: $letter_spacing;
     padding: 10px 15px;
     font-size: $medium_font_size;
     font-family: $first_font;

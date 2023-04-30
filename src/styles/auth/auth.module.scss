@@ -1,7 +1,6 @@
 @import "../variable.scss";
 
 .form_cont {
-  height: 80%;
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -9,14 +8,20 @@
   justify-content: space-between;
   position: relative;
 }
+
 .form {
   width: 80%;
+}
+.form_two,
+.form_one{
+  width: 100%;
   height: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 .linkCont {
   width: 100%;
   height: 28px;
@@ -36,33 +41,24 @@
     font-size: calc($font_size + 2px);
   }
 }
-.a_nav_return {
-  color: $second_color;
-  font-family: $second_font;
-  text-decoration: none;
-  font-size: $small_font_size;
-  transition: 0.2s;
-  width: 100%;
-  &:hover {
-    cursor: pointer;
-    font-size: calc($small_font_size + 2px);
-  }
-}
 .inputName {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.returnLink {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 
 // ----------------------
 //        ABOUT
 // ----------------------
-
+.form_cont_about {
+  height: 80%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
 .about_link_cont {
   height:100px;
   display: flex;
@@ -79,6 +75,13 @@
     text-align: center;
     .about_button_register {
       border-right: solid $border_width $second_color;
+      display: flex;
+      height: 90%;
+      width: 50%;
+      justify-content: center;
+      align-items: center;
+    }
+    .about_button_register_other {
       display: flex;
       height: 90%;
       width: 50%;

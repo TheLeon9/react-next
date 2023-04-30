@@ -1,59 +1,134 @@
-@import '../styles/variable.scss';
+@import "../styles/variable.scss";
 
 @font-face {
-    font-family: "AsianStyle";
-    src: url("../../public/font/shanghai.ttf");
+  font-family: "AsianStyle";
+  src: url("../../public/font/shanghai.ttf");
 }
 @font-face {
-    font-family: "ChowStyle";
-    src: url("../../public/font/CHOWFUN_.TTF");
+  font-family: "ChowStyle";
+  src: url("../../public/font/CHOWFUN_.TTF");
 }
 
 * {
-    box-sizing: unset;
+  box-sizing: unset;
 }
 
-body{
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('../../public//img/asianlandscape.jpg');
-    background-size: 100% 100%;
-    letter-spacing: $letter_spacing;
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  background-image: url("../../public//img/asianlandscape.jpg");
+  background-size: 100% 100%;
+  letter-spacing: $letter_spacing;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-#__next{
-    height: 100%;
-    width: 100%;
+#__next {
+  width: 100%;
 }
-.p{
+.p {
+  color: $white_color;
+  font-size: $font_size;
+  font-family: $second_font;
+  &_black {
+    color: $black_color;
+  }
+  &_small {
+    font-size: $small_font_size;
+  }
+  &_medium {
+    font-size: $medium_font_size;
+  }
+}
+.span {
+  color: $first_color;
+  font-size: $font_size;
+  font-family: $second_font;
+  &_black {
+    color: $black_color;
+  }
+  &_small {
+    font-size: $small_font_size;
+  }
+  &_medium {
+    font-size: $medium_font_size;
+  }
+  &_light {
+    color: $second_color;
+  }
+  &_light_small {
+    color: $second_color;
+    font-size: $small_font_size;
+  }
+  &_light_medium {
+    color: $second_color;
+    font-size: $medium_font_size;
+  }
+}
+.btn {
+  display: inline-block;
+  letter-spacing: $letter_spacing;
+  padding: 10px 15px;
+  font-size: $medium_font_size;
+  font-family: $first_font;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: 0.2s all;
+  border-radius: $border_radius;
+  &_primary {
+    background: $second_color;
+    color: $black_color;
+    border: $border_width solid $first_color;
+    &:hover {
+      background: $first_color;
+      margin-bottom: $button_margin_bottom;
+    }
+  }
+  &_secondary {
+    border: $border_width solid $first_color;
+    background: transparent;
     color: $white_color;
-    font-size: $font_size;
-    font-family: $second_font;
-    &_small{
-        font-size: $small_font_size;
+    &:hover {
+      background: $first_color;
+      color: $black_color;
+      margin-bottom: $button_margin_bottom;
     }
-    &_medium{
-        font-size: $medium_font_size;
-    }
+  }
 }
-.span{
+
+.returnLink {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  .basic_link {
     color: $first_color;
-    font-size: $font_size;
-    font-family: $second_font;
-    &_small{
-        font-size: $small_font_size;
+    font-family: $first_font;
+    text-decoration: none;
+    font-size: $big_font_size;
+    transition: 0.2s;
+    &:hover {
+      cursor: pointer;
+      font-size: calc($big_font_size + 2px);
     }
-    &_medium{
-        font-size: $medium_font_size;
+  }
+}
+
+.nav_cont {
+  height: 40px;
+  .basic_link {
+    color: $first_color;
+    font-family: $first_font;
+    text-decoration: none;
+    font-size: $big_font_size;
+    transition: 0.2s;
+    &:hover {
+      cursor: pointer;
+      font-size: calc($big_font_size + 2px);
     }
-    &_light_small{
-        color: $second_color;
-        font-size: $small_font_size;
-    }
-    &_light_medium{
-        color: $second_color;
-        font-size: $medium_font_size;
-    }
+  }
 }

@@ -1,0 +1,68 @@
+@import "@/styles/variable.scss";
+
+.top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10%;
+}
+.top_right,
+.top_left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.margin_for_button{
+  margin-right: 10px;
+}
+.middle {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.input {
+  margin-top: 10px;
+  display: inline-block;
+  letter-spacing: $letter_spacing;
+  padding: 10px 15px;
+  font-size: $small_font_size;
+  font-family: $second_font;
+  font-weight: 400;
+  text-indent: $text_indent;
+  border: solid $border_width $first_color;
+  background: none;
+  color: $first_color;
+  border-top: none;
+  border-right: none;
+  &:focus {
+    outline: none;
+  }
+}
+.card_cont {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  .card{
+    margin: 10px;
+    height: 260px;
+    width: 260px;
+    border-radius: $border_radius;
+    background: rgba($color: $second_color, $alpha: 0.2);
+    border: solid $border_width $first_color;
+    padding: 10px;
+    .card_top{
+        border-bottom:solid $border_width $first_color;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+}

@@ -4,13 +4,10 @@ import LinkStyle from "@/components/Link";
 import Logo from "@/components/UI/Logo";
 import LogoDemon from "/public/img/Demon-Lion.svg";
 import Title from "@/components/UI/Title";
+import Link from "next/link";
 
 export default function Home() {
   const menu = [
-    {
-      title: "home",
-      link: "/",
-    },
     {
       title: "about",
       link: "/auth/about",
@@ -20,8 +17,12 @@ export default function Home() {
       link: "/auth/login",
     },
     {
-      title: "register",
-      link: "/auth/register",
+      title: "register company",
+      link: "/auth/register/company",
+    },
+    {
+      title: "register freelance",
+      link: "/auth/register/freelance",
     },
   ];
   return (
@@ -37,6 +38,11 @@ export default function Home() {
         </div>
         <div className={style.middle}>
           <Logo src={LogoDemon.src} alt="Logo-Middle" width={200}/>
+        </div>
+        <div className="nav_cont">
+        <Link href="/user" className="basic_link">
+          User Home
+        </Link>
         </div>
         <div className={style.bottom}>
           {menu.map((post) => {
