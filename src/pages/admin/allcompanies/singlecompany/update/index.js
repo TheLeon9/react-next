@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import style from "../index.module.scss";
+import style from "../../../index.module.scss";
 import Title from "@/components/UI/Title";
 import Button from "@/components/UI/Button";
 import Input from "@/components/UI/Input";
@@ -13,7 +13,6 @@ export default function Index() {
     newfirstName: "",
     newlastName: "",
     newemail: "",
-    newpassword: "",
     newcity: "",
     newaddress: "",
     newpostalcode: "",
@@ -37,7 +36,11 @@ export default function Index() {
   };
   return (
     <div className={style.update_company_cont}>
-      <Title level="h1" title="Uptdate your Information" className="h1_pink" />
+      <Title
+        level="h1"
+        title="Uptdate this company informations"
+        className="h1_pink"
+      />
       <form onSubmit={(e) => submitRegister(e)} className={style.form}>
         <div className={style.form_wrapper}>
           <div className={style.form_one}>
@@ -105,20 +108,11 @@ export default function Index() {
                 onChange={(e) => handleChange(e)}
                 value={userForm.newnumber}
               />
-              <Input
-                label="Password"
-                type="password"
-                name="newpassword"
-                placeholder="Put your PassWord"
-                required={true}
-                onChange={(e) => handleChange(e)}
-                value={userForm.newpassword}
-              />
             </div>
           </div>
           <div className={style.form_two}>
             <div className={style.form_cont}>
-              <Input
+            <Input
                 label="Company Name"
                 type="text"
                 name="newcompanyName"
@@ -136,46 +130,46 @@ export default function Index() {
                 onChange={(e) => handleChange(e)}
                 value={userForm.newcompanyStatus}
               />
-              <Input
-                label="Company Siret"
-                type="text"
-                name="newcompanySiret"
-                placeholder="Put your Mail"
-                required={true}
-                onChange={(e) => handleChange(e)}
-                value={userForm.newcompanySiret}
-              />
-              <Input
-                label="Company Address"
-                type="text"
-                name="newcompanyAddress"
-                placeholder="Put your Company Address"
-                required={true}
-                onChange={(e) => handleChange(e)}
-                value={userForm.newcompanyAddress}
-              />
-              <Input
-                label="Company City"
-                type="text"
-                name="newcompanyCity"
-                placeholder="Put your Company City"
-                required={true}
-                onChange={(e) => handleChange(e)}
-                value={userForm.newcompanyCity}
-              />
-              <Input
-                label="Company Postal Code"
-                type="text"
-                name="newcompanyPostalCode"
-                placeholder="Put your Company Postal Code"
-                required={true}
-                onChange={(e) => handleChange(e)}
-                value={userForm.newcompanyPostalCode}
-              />
+               <Input
+              label="Company Siret"
+              type="text"
+              name="newcompanySiret"
+              placeholder="Put your Mail"
+              required={true}
+              onChange={(e) => handleChange(e)}
+              value={userForm.newcompanySiret}
+            />
+            <Input
+              label="Company Address"
+              type="text"
+              name="newcompanyAddress"
+              placeholder="Put your Company Address"
+              required={true}
+              onChange={(e) => handleChange(e)}
+              value={userForm.newcompanyAddress}
+            />
+            <Input
+              label="Company City"
+              type="text"
+              name="newcompanyCity"
+              placeholder="Put your Company City"
+              required={true}
+              onChange={(e) => handleChange(e)}
+              value={userForm.newcompanyCity}
+            />
+            <Input
+              label="Company Postal Code"
+              type="text"
+              name="newcompanyPostalCode"
+              placeholder="Put your Company Postal Code"
+              required={true}
+              onChange={(e) => handleChange(e)}
+              value={userForm.newcompanyPostalCode}
+            />
             </div>
           </div>
         </div>
-        <Button type="submit" title="Update" className="btn_primary" />
+          <Button type="submit" title="Update" className="btn_primary" />
       </form>
     </div>
   );

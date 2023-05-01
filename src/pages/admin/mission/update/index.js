@@ -10,15 +10,15 @@ export default function Index() {
   const router = useRouter();
 
   const [userForm, setUserForm] = useState({
-    dateStart: "",
-    dateEnd: "",
-    amount: "",
-    title: "",
-    description: "",
-    status: "",
-    skills: [""],
-    propositions: [""],
-    company: "",
+    newdateStart: "",
+    newdateEnd: "",
+    newamount: "",
+    newtitle: "",
+    newdescription: "",
+    newstatus: "",
+    newskills: [""],
+    newpropositions: [""],
+    newcompany: "",
   });
   const handleChange = (e) => {
     setUserForm({
@@ -34,7 +34,7 @@ export default function Index() {
     <div className={style.update_company_cont}>
       <Title
         level="h1"
-        title="Create a new Mission"
+        title="Update this Mission informations"
         className="h1_pink"
       />
       <form onSubmit={(e) => submitRegister(e)} className={style.form}>
@@ -44,56 +44,56 @@ export default function Index() {
               <Input
                 label="Title"
                 type="text"
-                name="title"
+                name="newtitle"
                 placeholder="Put your mission Title"
                 required={true}
                 onChange={(e) => handleChange(e)}
-                value={userForm.title}
+                value={userForm.newtitle}
               />
               <Input
                 label="Description"
                 type="text"
-                name="description"
+                name="newdescription"
                 placeholder="Put your mission Description"
                 required={true}
                 onChange={(e) => handleChange(e)}
-                value={userForm.description}
+                value={userForm.newdescription}
               />
               <Input
                 label="Start Date"
                 type="date"
-                name="dateStart"
+                name="newdateStart"
                 placeholder="Put your mission start Date"
                 required={true}
                 onChange={(e) => handleChange(e)}
-                value={userForm.dateStart}
+                value={userForm.newdateStart}
               />
               <Input
                 label="End Date"
                 type="date"
-                name="dateEnd"
+                name="newdateEnd"
                 placeholder="Put your mission end Date"
                 required={true}
                 onChange={(e) => handleChange(e)}
-                value={userForm.dateEnd}
+                value={userForm.newdateEnd}
               />
               <Input
                 label="Amount (€)"
                 type="text"
-                name="amount"
+                name="newamount"
                 placeholder="Put your mission Amount in €"
                 required={true}
                 onChange={(e) => handleChange(e)}
-                value={userForm.amount}
+                value={userForm.newamount}
               />
               <Input
                 label="Company Name"
                 type="text"
-                name="company"
+                name="newcompany"
                 placeholder="Put your Company Name"
                 required={true}
                 onChange={(e) => handleChange(e)}
-                value={userForm.company}
+                value={userForm.newcompany}
               />
               <Input
                 label="Mission Status"
@@ -109,19 +109,19 @@ export default function Index() {
               <div className={style.select_input_cont}>
                 <span className="span">Choose 3 Freelances</span>
                 <div className={style.select_input}>
-                  <select name="propositions" id="">
+                  <select name="newpropositions" id="">
                     <option value="">-- Choose Freelance --</option>
                     <option value="">Mat.M</option>
                     <option value="">The.M</option>
                     <option value="">Cla.M</option>
                   </select>
-                  <select name="propositions" id="">
+                  <select name="newpropositions" id="">
                     <option value="">-- Choose Freelance --</option>
                     <option value="">Mat.M</option>
                     <option value="">The.M</option>
                     <option value="">Cla.M</option>
                   </select>
-                  <select name="propositions" id="">
+                  <select name="newpropositions" id="">
                     <option value="">-- Choose Freelance --</option>
                     <option value="">Mat.M</option>
                     <option value="">The.M</option>
@@ -132,28 +132,28 @@ export default function Index() {
               <div className={style.select_input_cont}>
                 <span className="span">Choose 4 skills</span>
                 <div className={style.select_input_skills}>
-                  <select name="skills" id="">
+                  <select name="newskills" id="">
                     <option value="">-- Choose Skills --</option>
                     <option value="">JS</option>
                     <option value="">HTML</option>
                     <option value="">CSS</option>
                     <option value="">REACT</option>
                   </select>
-                  <select name="skills" id="">
+                  <select name="newskills" id="">
                     <option value="">-- Choose Skills --</option>
                     <option value="">JS</option>
                     <option value="">HTML</option>
                     <option value="">CSS</option>
                     <option value="">REACT</option>
                   </select>
-                  <select name="skills" id="">
+                  <select name="newskills" id="">
                     <option value="">-- Choose Skills --</option>
                     <option value="">JS</option>
                     <option value="">HTML</option>
                     <option value="">CSS</option>
                     <option value="">REACT</option>
                   </select>
-                  <select name="skills" id="">
+                  <select name="newskills" id="">
                     <option value="">-- Choose Skills --</option>
                     <option value="">JS</option>
                     <option value="">HTML</option>
@@ -165,7 +165,7 @@ export default function Index() {
             </div>
           </div>
         </div>
-        <Button type="submit" title="Create" className="btn_primary" />
+        <Button type="submit" title="Update" className="btn_primary" />
       </form>
     </div>
   );

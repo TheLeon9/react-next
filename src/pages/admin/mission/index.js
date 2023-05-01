@@ -3,10 +3,15 @@ import LogoDemon from "/public/img/Demon-Logo.svg";
 import style from "../index.module.scss";
 import Logo from "@/components/UI/Logo";
 import Title from "@/components/UI/Title";
-export default function Freelance() {
+import Link from "next/link";
+export default function Index() {
+  const deleteMission = (e) => {
+    e.preventDefault();
+    console.log("delete");
+  };
   return (
-    <div className={style.mission_freelance_cont}>
-      <Title level="h1" title="Your Missions" className="h1_pink" />
+    <div className={style.mission_company_cont}>
+      <Title level="h1" title="Sell all Missions" className="h1_pink" />
       <div className={style.card_cont}>
         <div className={style.card}>
           <div className={style.card_top}>
@@ -31,8 +36,15 @@ export default function Freelance() {
           <span className="span span_small">Description : </span>
           <p className="p p_small">Lorem ipsum dolor sit amet ronaldo pepito</p>
           <div className={style.button_cont}>
-            <button className="btn btn_primary">ACCEPT</button>
-            <button className="btn btn_secondary">DECLINE</button>
+            <Link href="/admin/mission/update" className="btn btn_primary">
+              UPDATE
+            </Link>
+            <button
+              className="btn btn_secondary"
+              onClick={(e) => deleteMission(e)}
+            >
+              DELETE
+            </button>
           </div>
         </div>
       </div>

@@ -1,29 +1,25 @@
 import React, { useState, useEffect } from "react";
 
-import style from "../index.module.scss";
+import style from "../../../index.module.scss";
 import Title from "@/components/UI/Title";
 import Button from "@/components/UI/Button";
 import Input from "@/components/UI/Input";
 import { useRouter } from "next/router";
 
-export default function Index() {
+export default function Freelance() {
   const router = useRouter();
 
   const [userForm, setUserForm] = useState({
     newfirstName: "",
     newlastName: "",
     newemail: "",
-    newpassword: "",
     newcity: "",
     newaddress: "",
     newpostalcode: "",
     newnumber: "",
-    newcompanyName: "",
-    newcompanyStatus: "",
-    newcompanySiret: "",
-    newcompanyAddress: "",
-    newcompanyCity: "",
-    newcompanyPostalCode: "",
+    newyearOfExperience: 0,
+    newrate: 0,
+    newuserType: "FREELANCE",
   });
   const handleChange = (e) => {
     setUserForm({
@@ -36,8 +32,12 @@ export default function Index() {
     router.reload();
   };
   return (
-    <div className={style.update_company_cont}>
-      <Title level="h1" title="Uptdate your Information" className="h1_pink" />
+    <div className={style.update_freelance_cont}>
+      <Title
+        level="h1"
+        title="Uptdate this freelance Informations"
+        className="h1_pink"
+      />
       <form onSubmit={(e) => submitRegister(e)} className={style.form}>
         <div className={style.form_wrapper}>
           <div className={style.form_one}>
@@ -105,77 +105,32 @@ export default function Index() {
                 onChange={(e) => handleChange(e)}
                 value={userForm.newnumber}
               />
-              <Input
-                label="Password"
-                type="password"
-                name="newpassword"
-                placeholder="Put your PassWord"
-                required={true}
-                onChange={(e) => handleChange(e)}
-                value={userForm.newpassword}
-              />
             </div>
           </div>
           <div className={style.form_two}>
             <div className={style.form_cont}>
               <Input
-                label="Company Name"
-                type="text"
-                name="newcompanyName"
-                placeholder="Put your Company Name"
+                label="Years Of Experience"
+                type="number"
+                name="newyearOfExperience"
+                placeholder="Put your Years of exeperience"
                 required={true}
                 onChange={(e) => handleChange(e)}
-                value={userForm.newcompanyName}
+                value={userForm.newyearOfExperience}
               />
               <Input
-                label="Company Status"
-                type="text"
-                name="newcompanyStatus"
-                placeholder="Put your Company Status"
+                label="Rate"
+                type="number"
+                name="newrate"
+                placeholder="How would you rate you"
                 required={true}
                 onChange={(e) => handleChange(e)}
-                value={userForm.newcompanyStatus}
-              />
-              <Input
-                label="Company Siret"
-                type="text"
-                name="newcompanySiret"
-                placeholder="Put your Mail"
-                required={true}
-                onChange={(e) => handleChange(e)}
-                value={userForm.newcompanySiret}
-              />
-              <Input
-                label="Company Address"
-                type="text"
-                name="newcompanyAddress"
-                placeholder="Put your Company Address"
-                required={true}
-                onChange={(e) => handleChange(e)}
-                value={userForm.newcompanyAddress}
-              />
-              <Input
-                label="Company City"
-                type="text"
-                name="newcompanyCity"
-                placeholder="Put your Company City"
-                required={true}
-                onChange={(e) => handleChange(e)}
-                value={userForm.newcompanyCity}
-              />
-              <Input
-                label="Company Postal Code"
-                type="text"
-                name="newcompanyPostalCode"
-                placeholder="Put your Company Postal Code"
-                required={true}
-                onChange={(e) => handleChange(e)}
-                value={userForm.newcompanyPostalCode}
+                value={userForm.newrate}
               />
             </div>
           </div>
         </div>
-        <Button type="submit" title="Update" className="btn_primary" />
+          <Button type="submit" title="Update" className="btn_primary" />
       </form>
     </div>
   );

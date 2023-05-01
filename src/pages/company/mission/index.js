@@ -9,6 +9,7 @@ export default function Index() {
     e.preventDefault();
     console.log("delete");
   };
+
   return (
     <div className={style.mission_company_cont}>
       <Title level="h1" title="Your Missions" className="h1_pink" />
@@ -25,7 +26,7 @@ export default function Index() {
               level="h2"
               title="Mission Title"
               className="h2_pink"
-              size="medium"
+              size="big"
             />
             <div className={style.text_card_top_cont}>
               <p className="p p_small">Ubisoft</p>

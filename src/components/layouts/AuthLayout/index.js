@@ -9,7 +9,7 @@ import { useRouter } from "next/router";
 const Index = ({ children }) => {
   const location = useRouter();
   let logoSrc, child;
-  if (location.pathname === "/auth/login") {
+  if (location.pathname === "/auth/login" || location.pathname === "/auth/login_admin") {
     logoSrc = ImageLogin.src;
     child =  <div className={style.left__part__about}>{children}</div>;
   } else if (location.pathname === "/auth/about") {

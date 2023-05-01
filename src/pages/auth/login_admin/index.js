@@ -15,8 +15,8 @@ export default function Login() {
   // const { login } = useContext(UserContext);
 
   const [userForm, setUserForm] = useState({
-    email: "",
-    password: "",
+    adminemail: "",
+    adminpassword: "",
   });
 
   // const [token, setToken] = useState();
@@ -51,43 +51,38 @@ export default function Login() {
   };
   const submitLogin = (e) => {
     e.preventDefault();
-    const options = ["freelance", "company"];
-    const randomOption = options[Math.floor(Math.random() * options.length)];
-    // router.push(`/${randomOption}`);
-    router.push(`/company`);
+    router.push(`/admin`);
     // fetchData();
   };
   return (
     <div className={style.form_cont}>
-      <Title level="h1" title="LOGIN" className="h1_pink" size="title" />
+      <Title level="h1" title="LOGIN ADMIN" className="h1_pink" size="title" />
       <div>
-        <p className="p p_small">You don't have an account ?</p>
+        <p className="p p_small">You don't have an ADMIN account ?</p>
         <div className={style.linkCont}>
-          <Link href="/auth/about" className={style.a_nav}>
-            Create One
-          </Link>
+          <span className="span">Create One in the DataBase</span>
         </div>
       </div>
       <form onSubmit={(e) => submitLogin(e)} className={style.form}>
         <Input
-          label="Email"
+          label="Admin Email"
           type="email"
-          name="email"
+          name="adminemail"
           placeholder="Put your Mail"
           required={true}
           onChange={(e) => handleChange(e)}
-          value={userForm.email}
+          value={userForm.adminemail}
         />
         <Input
-          label="Password"
+          label="Admin Password"
           type="password"
-          name="password"
+          name="adminpassword"
           placeholder="Put your PassWord"
           required={true}
           onChange={(e) => handleChange(e)}
-          value={userForm.password}
+          value={userForm.adminpassword}
         />
-        <Button type="submit" title="Login" className="btn_primary" />
+        <Button type="submit" title="Login As Admin" className="btn_primary" />
       </form>
       <div className="returnLink">
         <Link href="/" className="basic_link">

@@ -5,7 +5,11 @@ import LogoDemon from "/public/img/Demon-Logo.svg";
 import Logo from "@/components/UI/Logo";
 import Link from "next/link";
 
-export default function User() {
+export default function Index() {
+  const deleteFreelance = (e) => {
+    e.preventDefault();
+    console.log("delete");
+  };
   return (
     <>
       <div className={style.middle}>
@@ -32,7 +36,12 @@ export default function User() {
             />
             <div className={style.text_card_top_cont}>
               <p className="p p_small">4 / 5</p>
-              <Link  href="/company/allfreelance/singlefreelance" className="btn btn_primary">View More</Link>
+              <Link
+                href="/admin/allfreelance/singlefreelance"
+                className="btn btn_primary"
+              >
+                View More
+              </Link>
             </div>
           </div>
           <p className="p p_small">
@@ -44,6 +53,20 @@ export default function User() {
           <p className="p p_small">
             <span className="span span_small">City : </span>Paris
           </p>
+          <div className={style.button_cont}>
+            <Link
+              href="/admin/allfreelance/singlefreelance/update"
+              className="btn btn_primary"
+            >
+              UPDATE
+            </Link>
+            <button
+              className="btn btn_secondary"
+              onClick={(e) => deleteFreelance(e)}
+            >
+              DELETE
+            </button>
+          </div>
         </div>
       </div>
     </>

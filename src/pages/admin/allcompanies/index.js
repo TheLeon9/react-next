@@ -5,13 +5,17 @@ import LogoDemon from "/public/img/Demon-Logo.svg";
 import Logo from "@/components/UI/Logo";
 import Link from "next/link";
 
-export default function User() {
+export default function Index() {
+  const deleteCompany = (e) => {
+    e.preventDefault();
+    console.log("delete");
+  };
   return (
     <>
       <div className={style.middle}>
         <Title
           level="h1"
-          title="See all Freelances"
+          title="See all Companies"
           className="h1_pink"
         />
         <input
@@ -31,19 +35,41 @@ export default function User() {
               size="big"
             />
             <div className={style.text_card_top_cont}>
-              <p className="p p_small">4 / 5</p>
-              <Link  href="/company/allfreelance/singlefreelance" className="btn btn_primary">View More</Link>
+              <p className="p p_small">Ubisoft</p>
+              <Link
+                href="/admin/allcompanies/singlecompany"
+                className="btn btn_primary"
+              >
+                View More
+              </Link>
             </div>
           </div>
           <p className="p p_small">
-            <span className="span span_small">Experience : </span>10 years
+            <span className="span span_small">Siret : </span>123 4555 7879
           </p>
           <p className="p p_small">
-            <span className="span span_small">Num : </span>00 00 00 00 00
+            <span className="span span_small">Status : </span>SAS
           </p>
           <p className="p p_small">
             <span className="span span_small">City : </span>Paris
           </p>
+          <p className="p p_small">
+            <span className="span span_small">Postal Code : </span>75000
+          </p>
+          <div className={style.button_cont}>
+            <Link
+              href="/admin/allcompanies/singlecompany/update"
+              className="btn btn_primary"
+            >
+              UPDATE
+            </Link>
+            <button
+              className="btn btn_secondary"
+              onClick={(e) => deleteCompany(e)}
+            >
+              DELETE
+            </button>
+          </div>
         </div>
       </div>
     </>

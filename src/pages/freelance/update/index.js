@@ -35,10 +35,9 @@ export default function Freelance() {
   return (
     <div className={style.update_freelance_cont}>
       <Title
-        level="h2"
+        level="h1"
         title="Uptdate your Information"
-        className="h2_pink"
-        size="big"
+        className="h1_pink"
       />
       <form onSubmit={(e) => submitRegister(e)} className={style.form}>
         <div className={style.form_wrapper}>
