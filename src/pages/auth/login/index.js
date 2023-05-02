@@ -6,7 +6,6 @@ import Title from "@/components/UI/Title";
 import Button from "@/components/UI/Button";
 import Input from "@/components/UI/Input";
 import useFetch from "@/hooks/useFetch";
-import Notification from "@/components/UI/Notification";
 import { useRouter } from "next/router";
 
 export default function Login() {
