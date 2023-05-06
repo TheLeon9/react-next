@@ -15,7 +15,7 @@ Le but de ce projet est de faire un **"Site Web"** dans lequel on utilise une ap
 
 ## PROJET :raised_eyebrow:
 
-Lorsque vous arriver sur le pojet vous arriver sur la page home dans laquelle vous pouvez choisir about pour avoir des informations, ou alors login pour vous connecter ou 2 register pour creer un compte soit freelance soit company. Vous pouvez également acceder au site en étant non connecté mais vous ne pouvez pas faire grand chose. Quand vous vous login, vous arrivez soit sur la page freelance soit sur la page company 1 chance sur 2. Puis apres vous pouvez vous balader a travers vos différentes pages et fonctionnalitées. Pour la partie admin c'est simple ils vous suffit d'aller sur une page cacher : /auth/login_admin puis de vous balader sur vos différentes pages.
+Lorsque vous arrivez sur le projet, vous arriver sur la page "Home" dans laquelle vous pouvez choisir "About" pour avoir des informations, ou alors "Login" pour vous connecter ou 2 "Register" pour créer un compte soit "Freelance" soit "Company". Vous pouvez également accéder au site en étant non connecté, mais vous ne pouvez pas faire grand chose. Quand vous vous "Login", vous arrivez soit sur la page "Freelance" soit sur la page "Company" 1 chance sur 2. Puis après vous pouvez vous balader à travers vos différentes pages et fonctionnalités. Pour la partie "Admin" c'est simple, il vous suffit d'aller sur une page cachée : "/auth/login_admin" puis de vous balader sur vos différentes pages.
 
 --------------------------
 
