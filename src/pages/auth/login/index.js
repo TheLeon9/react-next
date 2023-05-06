@@ -1,46 +1,19 @@
-import React, { useState, useEffect, useContext } from "react";
-import UserContext from "@/context/UserContext";
+import React, { useState } from "react";
 import style from "@/styles/auth/auth.module.scss";
 import Link from "next/link";
 import Title from "@/components/UI/Title";
 import Button from "@/components/UI/Button";
 import Input from "@/components/UI/Input";
-import useFetch from "@/hooks/useFetch";
 import { useRouter } from "next/router";
 
 export default function Login() {
   const router = useRouter();
 
-  // const { login } = useContext(UserContext);
 
   const [userForm, setUserForm] = useState({
     email: "",
     password: "",
   });
-
-  // const [token, setToken] = useState();
-
-  // const { fetchData, data, error, loading } = useFetch({ url: "/auth/login", method: "POST", body: userForm, token: null })
-  // const { data: user, error: userError, loading:userLoading, fetchData:fetchDataUser } = useFetch({ url: "/user", method: "GET", body: null, token: token });
-
-  // useEffect(() => {
-  //   if (data.token) {
-  //     setToken(data.token);
-  //     localStorage.setItem('token', data.token);
-  //   }
-  // }, [data]);
-
-  // useEffect(() => {
-  //   fetchDataUser();
-  //   if (user.success) {
-  //     login({
-  //       firstName: user.user.firstName,
-  //       lastName: user.user.lastName,
-  //       email:user.user.email
-  //     })
-  //     router.push('/account/profil');
-  //   }
-  // },[token,user])
 
   const handleChange = (e) => {
     setUserForm({
@@ -52,9 +25,7 @@ export default function Login() {
     e.preventDefault();
     const options = ["freelance", "company"];
     const randomOption = options[Math.floor(Math.random() * options.length)];
-    // router.push(`/${randomOption}`);
-    router.push(`/company`);
-    // fetchData();
+    router.push(`/${randomOption}`);
   };
   return (
     <div className={style.form_cont}>

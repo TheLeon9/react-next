@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import style from "../index.module.scss";
 import Title from "@/components/UI/Title";
 import LogoDemon from "/public/img/Demon-Logo.svg";

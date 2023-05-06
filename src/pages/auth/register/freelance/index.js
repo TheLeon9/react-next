@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import style from "@/styles/auth/auth.module.scss";
 import Link from "next/link";
 import Title from "@/components/UI/Title";
 import Button from "@/components/UI/Button";
 import Input from "@/components/UI/Input";
-import useFetch from "@/hooks/useFetch";
 import { useRouter } from "next/router";
 
 export default function Register() {
@@ -23,11 +22,6 @@ export default function Register() {
     rate: 0,
     userType: "FREELANCE",
   });
-  const { fetchData, data, error, loading } = useFetch({
-    url: "/auth/register",
-    method: "POST",
-    body: userForm,
-  });
   const handleChange = (e) => {
     setUserForm({
       ...userForm,
@@ -37,8 +31,6 @@ export default function Register() {
   const submitRegister = (e) => {
     e.preventDefault();
     router.push("/auth/login");
-    // fetchData();
-    // console.log(userForm);
   };
   const [showFormOne, setShowFormOne] = useState(true);
   const buttonText = showFormOne ? "Swap Freelance Info" : "Swap User Info";
